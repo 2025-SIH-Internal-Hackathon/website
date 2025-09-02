@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Compass - Career & Education Advisor</title>
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <h1>Career Compass</h1>
+    </div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Quiz</a>
+      <a href="courses.html">Courses</a>
+      <a href="colleges.html">Colleges</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="resources.html">Resources</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+    <main class="quiz-page">
+    <div class="quiz-container">
+      
+      
+      <a href="index.html" class="back-arrow">&#8592;</a>
+
+      
+      <div class="quiz-question">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nisi maiores temporibus explicabo facere possimus dolores optio, labore natus earum aliquam assumenda blanditiis voluptatum perspiciatis? A deserunt expedita reprehenderit consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur perspiciatis quod aliquid, quo hic deleniti doloremque maxime sed sit alias minus dolore earum sint eveniet blanditiis quis quos dolor.</h2>
+      </div>
+
+     
+      <div class="quiz-options">
+        <button class="option-btn">Mathematics</button>
+        <button class="option-btn">Science</button>
+        <button class="option-btn">History</button>
+        <button class="option-btn">Commerce</button>
+      </div>
+
+      
+      <div class="quiz-actions">
+        <button class="btn-clear" id="clear-btn">Clear Response</button>
+        <button class="btn-submit">Submit</button>
+      </div>
+    </div>
+  </main>
+  <script>
+    const optionButtons = document.querySelectorAll(".option-btn");
+    const clearBtn = document.getElementById("clear-btn");
+
+    optionButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("selected")) {
+          btn.classList.remove("selected");
+        } else {
+          optionButtons.forEach(b => b.classList.remove("selected"));
+          btn.classList.add("selected");
+        }
+      });
+    });
+
+    clearBtn.addEventListener("click", () => {
+      optionButtons.forEach(b => b.classList.remove("selected"));
+    });
+  </script>
+  <footer class="footer">
+    <p>&copy; 2025 Career Compass. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
